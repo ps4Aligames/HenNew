@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html><head>
-<title>PS4  Exploit Host by Ali games</title>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PS4 Exploit Host by Ali games</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <script>
-var histlength=history.length;history.go(-histlength 2);
+  var histlength = history.length;
+  if(histlength > 1) {
+    history.go(-histlength + 2);
+  }
 </script>
-<h1 id=msgs>PS4  Exploit Host by Ali games</h1>
-<hr>
-<br>
-<div id=menu>
-<h1 style="font-size: 18px;color: yellow;">Select Your Firmware</h1>
-<button class="btn btn-multi" onmouseover="msgs.innerHTML='PS4 GoldHEN Host for 5.05 and 7.00 to 13.00 FW - (Auto Exploit Selection)'" onmouseout="msgs.innerHTML='PS4  Exploit Host by GamerHack'" onclick="location.replace('g2all/index.html')"> GoldHEN Multi FW </button>
-<button class="btn" onmouseover="msgs.innerHTML='PS4 5.05 FW Host v2.5'" onmouseout="msgs.innerHTML='PS4  Exploit Host by GamerHack'" onclick="location.replace('505/index.html')"> 5.05 FW v2.5 </button>
-<a href="672goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 FW GoldHEN Host'" onmouseout="msgs.innerHTML='PS4  Exploit Host by GamerHack'"> 6.72 FW GoldHEN </button></a>
-<a href="672/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 FW Host v3.0'" onmouseout="msgs.innerHTML='PS4  Exploit Host by GamerHack'"> 6.72 FW v3.0 </button></a>
-<br>
-<a href="900goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 FW GoldHEN Host - (FontFaceSet Webkit)'" onmouseout="msgs.innerHTML='PS4  Exploit Host by GamerHack'"> 9.00 FW GoldHEN </button></a>
-<a href="900v3/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 FW Host v3.0 - (FontFaceSet Webkit)'" onmouseout="msgs.innerHTML='PS4  Exploit Host by GamerHack'"> 9.00 FW v3.0 </button></a>
-<br>
-<button class="btn" onmouseover="msgs.innerHTML='Restore a Host to User&#8217;s Guide without using DNS'" onmouseout="msgs.innerHTML='PS4  Exploit Host by GamerHack'" onclick="location.replace('restore/index.html')"> Restore Host </button>
+
+<!-- Mengatur jarak atas (margin-top) agar judul dan tombol turun ke bawah -->
+<div style="margin-top: 150px; text-align: right; padding-right: 50px;">
+  <h1 id="msgs">PS4 Exploit Host by Ali games</h1>
+  <br>
+  <div id="menu">
+    <button class="btn btn-multi" onmouseover="msgs.innerHTML='PS4 GoldHEN Host for 5.05 and 7.00 to 13.00 FW - (Auto Exploit Selection)'" onmouseout="msgs.innerHTML='PS4 Exploit Host by Ali games'" onclick="location.replace('g2all/index.html')"> GoldHEN Multi FW </button>
+  </div>
+</div>
+
 </body>
 </html>
