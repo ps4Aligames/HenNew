@@ -20,14 +20,30 @@
     text-align: center;
   }
 
-  /* Styling animasi di bawah tombol: diperbesar tinggi/panjangnya ke bawah */
+  /* Styling animasi di bawah tombol */
   .btn-anim {
     width: 250px;  /* Lebar disamakan dengan tombol */
-    height: 60vh;  /* Menggunakan 60% tinggi layar agar memanjang signifikan ke bawah */
-    min-height: 350px; /* Batas tinggi minimal */
+    height: 30vh;  /* Diperpendek */
+    min-height: 180px;
     object-fit: cover;
     border-radius: 8px;
     pointer-events: none;
+  }
+
+  /* Animasi teks bergerak */
+  .moving-text {
+    display: inline-block;
+    animation: marquee 5s ease-in-out infinite alternate;
+  }
+
+  /* Gerakan teks ke samping dan kembali */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100px);
+    }
   }
 </style>
 </head>
@@ -40,23 +56,21 @@
 </script>
 
 <div style="margin-top: 50px; text-align: right; padding-right: 50px;">
-  <h1 id="msgs">PS4 Exploit Host by Ali games</h1>
+  <!-- Teks judul yang bergerak -->
+  <h1 id="msgs"><span class="moving-text">PS4 Exploit Host by Ali games</span></h1>
   <br>
   <div id="menu">
     <!-- Container untuk menyusun tombol & animasi secara vertikal -->
     <div class="btn-container">
       <!-- Tombol hanya berisi teks GoldHEN -->
-      <button class="btn btn-long" onmouseover="msgs.innerHTML='PS4 GoldHEN Host for 5.05 and 7.00 to 13.00 FW - (Auto Exploit Selection)'" onmouseout="msgs.innerHTML='PS4 Exploit Host by Ali games'" onclick="location.replace('g2all/index.html')">
+      <button class="btn btn-long" onmouseover="msgs.innerHTML='<span class=\'moving-text\'>PS4 GoldHEN Host for 5.05 and 7.00 to 13.00 FW - (Auto Exploit Selection)</span>'" onmouseout="msgs.innerHTML='<span class=\'moving-text\'>PS4 Exploit Host by Ali games</span>'" onclick="location.replace('g2all/index.html')">
         <span>GoldHEN Multi FW</span>
       </button>
 
-      <!-- Video animasi memanjang ke bawah -->
+      <!-- Video animasi -->
       <video class="btn-anim" autoplay loop muted playsinline>
         <source src="gambar-gerak.mp4" type="video/mp4">
       </video>
-
-      <!-- Jika menggunakan GIF: -->
-      <!-- <img src="gambar-gerak.gif" class="btn-anim" alt="PS Animation"> -->
     </div>
   </div>
 </div>
