@@ -4,47 +4,6 @@
 <meta charset="utf-8">
 <title>PS4 Exploit Host by Ali games</title>
 <link rel="stylesheet" href="style.css">
-<style>
-  /* Flex container untuk menaruh area tombol di atas dan video di bawah */
-  .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Mengikuti tata letak posisi kanan sebelumnya */
-    gap: 15px;
-  }
-
-  /* Styling tombol panjang */
-  .btn-long {
-    width: 250px;
-    padding: 12px 20px;
-    text-align: center;
-  }
-
-  /* Styling animasi/video tetap di posisinya */
-  .btn-anim {
-    width: 250px;
-    height: 30vh;
-    min-height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    pointer-events: none;
-  }
-
-  /* Animasi teks bergerak */
-  .moving-text {
-    display: inline-block;
-    animation: marquee 5s ease-in-out infinite alternate;
-  }
-
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100px);
-    }
-  }
-</style>
 </head>
 <body>
 <script>
@@ -54,23 +13,12 @@
   }
 </script>
 
+<!-- Mengatur jarak atas (margin-top) diperkecil agar posisi naik ke atas -->
 <div style="margin-top: 50px; text-align: right; padding-right: 50px;">
-  <!-- Teks judul yang bergerak -->
-  <h1 id="msgs"><span class="moving-text">PS4 Exploit Host by Ali games</span></h1>
+  <h1 id="msgs">PS4 Exploit Host by Ali games</h1>
   <br>
-  
-  <div class="content-wrapper">
-    <!-- Kontainer menu tombol (akan berganti-ganti tampilan tanpa mempengaruhi video) -->
-    <div id="menu">
-      <button class="btn btn-long" onmouseover="msgs.innerHTML='<span class=\'moving-text\'>PS4 GoldHEN Host for 5.05 and 7.00 to 13.00 FW - (Auto Exploit Selection)</span>'" onmouseout="msgs.innerHTML='<span class=\'moving-text\'>PS4 Exploit Host by Ali games</span>'" onclick="location.replace('g2all/index.html')">
-        <span>GoldHEN Multi FW</span>
-      </button>
-    </div>
-
-    <!-- Video ditaruh di luar #menu agar tidak ikut tersembunyi/pindah saat menu berpindah -->
-    <video class="btn-anim" autoplay loop muted playsinline>
-      <source src="gambar-gerak.mp4" type="video/mp4">
-    </video>
+  <div id="menu">
+    <button class="btn btn-multi" onmouseover="msgs.innerHTML='PS4 GoldHEN Host for 5.05 and 7.00 to 13.00 FW - (Auto Exploit Selection)'" onmouseout="msgs.innerHTML='PS4 Exploit Host by Ali games'" onclick="location.replace('g2all/index.html')"> GoldHEN Multi FW </button>
   </div>
 </div>
 
