@@ -4,6 +4,28 @@
 <meta charset="utf-8">
 <title>PS4 Exploit Host by Ali games</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Styling tombol dengan tata letak vertikal (atas-bawah) */
+  .btn-multi {
+    display: inline-flex;
+    flex-direction: column; /* Menyusun teks di atas dan animasi di bawah */
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 30px; /* Padding ditingkatkan agar tombol terasa lebih panjang */
+    min-width: 200px; /* Lebar minimal tombol agar terlihat panjang */
+    vertical-align: middle;
+  }
+
+  /* Styling animasi di bawah teks: lebih besar dan bentuknya panjang/landscape */
+  .btn-anim {
+    width: 120px; /* Ukuran lebih lebar/panjang */
+    height: 60px; /* Tinggi disesuaikan */
+    object-fit: cover;
+    border-radius: 6px;
+    pointer-events: none;
+  }
+</style>
 </head>
 <body>
 <script>
@@ -13,12 +35,21 @@
   }
 </script>
 
-<!-- Mengatur jarak atas (margin-top) diperkecil agar posisi naik ke atas -->
 <div style="margin-top: 50px; text-align: right; padding-right: 50px;">
   <h1 id="msgs">PS4 Exploit Host by Ali games</h1>
   <br>
   <div id="menu">
-    <button class="btn btn-multi" onmouseover="msgs.innerHTML='PS4 GoldHEN Host for 5.05 and 7.00 to 13.00 FW - (Auto Exploit Selection)'" onmouseout="msgs.innerHTML='PS4 Exploit Host by Ali games'" onclick="location.replace('g2all/index.html')"> GoldHEN Multi FW </button>
+    <button class="btn btn-multi" onmouseover="msgs.innerHTML='PS4 GoldHEN Host for 5.05 and 7.00 to 13.00 FW - (Auto Exploit Selection)'" onmouseout="msgs.innerHTML='PS4 Exploit Host by Ali games'" onclick="location.replace('g2all/index.html')">
+      <span>GoldHEN Multi FW</span>
+      
+      <!-- Video animasi berada di bawah teks -->
+      <video class="btn-anim" autoplay loop muted playsinline>
+        <source src="gambar-gerak.mp4" type="video/mp4">
+      </video>
+      
+      <!-- Jika menggunakan GIF: -->
+      <!-- <img src="gambar-gerak.gif" class="btn-anim" alt="PS Animation"> -->
+    </button>
   </div>
 </div>
 
